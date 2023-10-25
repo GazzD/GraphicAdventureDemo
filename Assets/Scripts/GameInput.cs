@@ -53,6 +53,11 @@ public class GameInput : MonoBehaviour
         return inputActions.Player.Pause.triggered;
     }
 
+    public bool GetInventoryInputDown()
+    {
+        return inputActions.Player.Inventory.triggered;
+    }
+
     public void OnDeviceChange(PlayerInput pi)
     {
         isGamepad = pi.currentControlScheme != null && pi.currentControlScheme.Equals("Gamepad");
